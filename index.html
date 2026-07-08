@@ -1,11 +1,283 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
-<title>ひだまりポスト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ひだまりポスト ～9人のキラリ宝箱～</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
+
+<header>
+
+<div class="logo">
+
+📮
+
+<div>
+
+<h1>ひだまりポスト</h1>
+
+<p>〜9人のキラリ発見宝箱〜</p>
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<button id="teacherButton">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+先生用
+
+</button>
+
+<button id="homeButton">
+
+<i class="fa-solid fa-house"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<main id="app">
+
+<!-- メインメニュー -->
+
+<section id="mainMenu">
+
+<h2>
+
+みんなの「キラリ」をあつめよう
+
+</h2>
+
+<p>
+
+お友達のすてきなところを届けよう
+
+</p>
+
+<div class="menuButtons">
+
+<button id="sendButton">
+
+💌
+
+<span>キラリを送る</span>
+
+</button>
+
+<button id="portfolioButton">
+
+💎
+
+<span>みんなの宝箱</span>
+
+</button>
+
+</div>
+
+<div class="garden">
+
+<h3>
+
+🌸 学級のお庭 🌸
+
+</h3>
+
+<div id="totalFlower">
+
+0
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 投稿画面 -->
+
+<section id="sendPage" class="hidden">
+
+<button class="backButton">
+
+← 戻る
+
+</button>
+
+<h2>
+
+💌 キラリメッセージ
+
+</h2>
+
+<form id="postForm">
+
+<div>
+
+<label>
+
+だれに送る？
+
+</label>
+
+<div id="studentGrid">
+
+</div>
+
+</div>
+
+<div>
+
+<label>
+
+カテゴリー
+
+</label>
+
+<div id="categoryGrid">
+
+</div>
+
+</div>
+
+<div>
+
+<label>
+
+メッセージ
+
+</label>
+
+<textarea id="message"></textarea>
+
+</div>
+
+<div>
+
+<label>
+
+あなたの名前
+
+</label>
+
+<input type="text" id="sender">
+
+</div>
+
+<button type="submit">
+
+送信する
+
+</button>
+
+</form>
+
+</section>
+
+<!-- 宝箱 -->
+
+<section id="portfolioPage" class="hidden">
+
+<button class="backButton">
+
+← 戻る
+
+</button>
+
+<h2>
+
+💎 宝箱
+
+</h2>
+
+<div id="portfolioGrid">
+
+</div>
+
+</section>
+
+<!-- 個人宝箱 -->
+
+<section id="personalPage" class="hidden">
+
+<button class="backButton">
+
+← 戻る
+
+</button>
+
+<h2 id="childName">
+
+</h2>
+
+<div id="flowerArea">
+
+</div>
+
+<div id="messageArea">
+
+</div>
+
+</section>
+
+<!-- 先生画面 -->
+
+<section id="teacherPage" class="hidden">
+
+<h2>
+
+👨‍🏫 先生画面
+
+</h2>
+
+<div class="teacherTabs">
+
+<button id="approveTab">
+
+承認
+
+</button>
+
+<button id="settingTab">
+
+設定
+
+</button>
+
+</div>
+
+<div id="teacherContents">
+
+</div>
+
+</section>
+
+</main>
+
 <script type="module" src="firebase.js"></script>
+
 <script type="module" src="app.js"></script>
+
 </body>
+
 </html>
